@@ -9,7 +9,7 @@ using ProgrammersBlog.Entities.Concrete;
 
 namespace ProgrammersBlog.Data.Concrete.EntityFramework.Contexts
 {
-    public class ProrammersBlogContext:DbContext
+    public class ProgrammersBlogContext:DbContext
     {
         public DbSet<Article> Articles { get; set; }
         public DbSet<Category> Categories { get; set; }
@@ -19,7 +19,7 @@ namespace ProgrammersBlog.Data.Concrete.EntityFramework.Contexts
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite(@"Data Source=ProgrammersBlogDataBase.db");
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\ProjectsV13;Database=ProgrammersBlog;Trusted_Connection=True;Connect Timeout=30;MultipleActiveResultSets=True;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

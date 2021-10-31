@@ -28,6 +28,47 @@ namespace ProgrammersBlog.Data.Concrete.EntityFramework.Mappings
             builder.Property(c => c.Note).HasMaxLength(500);
             builder.HasOne<Article>(c => c.Article).WithMany(a => a.Comments).HasForeignKey(c => c.ArticleId);
             builder.ToTable("Comments");
+            builder.HasData(
+                new Comment
+                {
+                    Id = 1,
+                    ArticleId = 1,
+                    Text = "Çok çokomel bir makale :)",
+                    IsActive = true,
+                    IsDeleted = false,
+                    CreatedByName = "InitialCreate",
+                    CreatedDate = DateTime.Now,
+                    ModifiedByName = "InitialCreate",
+                    ModifiedDate = DateTime.Now,
+                    Note = "C# Makale Yorumu",
+                },
+                new Comment
+                {
+                    Id = 2,
+                    ArticleId = 2,
+                    Text = "Çok Çükülop bir makale :)",
+                    IsActive = true,
+                    IsDeleted = false,
+                    CreatedByName = "InitialCreate",
+                    CreatedDate = DateTime.Now,
+                    ModifiedByName = "InitialCreate",
+                    ModifiedDate = DateTime.Now,
+                    Note = "JAVA Makale Yorumu",
+                },
+                new Comment
+                {
+                    Id = 3,
+                    ArticleId = 3,
+                    Text = "Çok Çükübik bir makale :)",
+                    IsActive = true,
+                    IsDeleted = false,
+                    CreatedByName = "InitialCreate",
+                    CreatedDate = DateTime.Now,
+                    ModifiedByName = "InitialCreate",
+                    ModifiedDate = DateTime.Now,
+                    Note = "Python Makale Yorumu",
+                }
+            );
         }
     }
 }

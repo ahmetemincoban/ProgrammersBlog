@@ -28,6 +28,47 @@ namespace ProgrammersBlog.Data.Concrete.EntityFramework.Mappings
             builder.Property(c => c.IsDeleted).IsRequired();
             builder.Property(c => c.Note).HasMaxLength(500);
             builder.ToTable("Categories");
+            builder.HasData(
+                new Category
+                {
+                    Id = 1,
+                    Name = "C#",
+                    Description = "C# Programlama dili ile ilgili en güncel bilgiler.",
+                    IsActive = true,
+                    IsDeleted = false,
+                    CreatedByName = "InitialCreate",
+                    CreatedDate = DateTime.Now,
+                    ModifiedByName = "InitialCreate",
+                    ModifiedDate = DateTime.Now,
+                    Note = "C# Kategorisi"
+                },
+                new Category
+                {
+                    Id = 2,
+                    Name = "JAVA",
+                    Description = "Java Programlama dili ile ilgili en güncel bilgiler.",
+                    IsActive = true,
+                    IsDeleted = false,
+                    CreatedByName = "InitialCreate",
+                    CreatedDate = DateTime.Now,
+                    ModifiedByName = "InitialCreate",
+                    ModifiedDate = DateTime.Now,
+                    Note = "JAVA Kategorisi"
+                },
+                new Category
+                {
+                    Id = 3,
+                    Name = "Python",
+                    Description = "Python Programlama dili ile ilgili en güncel bilgiler.",
+                    IsActive = true,
+                    IsDeleted = false,
+                    CreatedByName = "InitialCreate",
+                    CreatedDate = DateTime.Now,
+                    ModifiedByName = "InitialCreate",
+                    ModifiedDate = DateTime.Now,
+                    Note = "Python Kategorisi"
+                }
+            );
         }
     }
 }

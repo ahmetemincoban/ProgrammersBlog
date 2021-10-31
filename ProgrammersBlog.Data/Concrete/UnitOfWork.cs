@@ -11,13 +11,13 @@ namespace ProgrammersBlog.Data.Concrete
 {
     public class UnitOfWork:IUnitOfWork
     {
-        private readonly ProrammersBlogContext _context;
+        private readonly ProgrammersBlogContext _context;
         private EfArticleRepository _articleRepository;
         private EfCategoryRepository _categoryRepository;
         private EfCommentRepository _commentRepository;
         private EfRoleRepository _roleRepository;
         private EfUserRepository _userRepository;
-        public UnitOfWork(ProrammersBlogContext context)
+        public UnitOfWork(ProgrammersBlogContext context)
         {
             _context = context;
         }
