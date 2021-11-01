@@ -1,14 +1,21 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\ProgrammersBlog.Data\ProgrammersBlog.Data.csproj" />
-    <ProjectReference Include="..\ProgrammersBlog.Entities\ProgrammersBlog.Entities.csproj" />
-    <ProjectReference Include="..\ProgrammersBlog.Mvc\ProgrammersBlog.Mvc.csproj" />
-    <ProjectReference Include="..\ProgrammersBlog.Shared\ProgrammersBlog.Shared.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="10.1.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\ProgrammersBlog.Data\ProgrammersBlog.Data.csproj" />
+		<ProjectReference Include="..\ProgrammersBlog.Entities\ProgrammersBlog.Entities.csproj" />
+		<ProjectReference Include="..\ProgrammersBlog.Shared\ProgrammersBlog.Shared.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="NewFolder\" />
+</ItemGroup>
 
 </Project>
