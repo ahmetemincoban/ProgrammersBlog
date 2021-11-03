@@ -28,7 +28,8 @@
                             <th>Son Düzenleyen Kullanıcı</th>
                         </tr>
                     </thead>
-                    @*<tfoot>
+                    @* //DataTable alt bilgi alanı
+                        <tfoot>
                             <tr>
                                 <th>ID</th>
                                 <th>Adı</th>
@@ -62,6 +63,13 @@
                 </table>
             </div>
         </div>
+    </div>
+}
+@if (Model.ResultStatus == ResultStatus.Error)
+{
+    <div class="alert alert-danger">
+        @Model.Message<br />
+        Dashboard sayfasına dönmek için lütfen <a class="alert-link" asp-area="Admin" asp-controller="Home" asp-action="Index">tıklayınız.</a>
     </div>
 }
 @section Scripts
