@@ -19,7 +19,7 @@ namespace ProgrammersBlog.Mvc
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
-            services.AddAutoMapper(typeof(CategoryProfile));
+            services.AddAutoMapper(typeof(CategoryProfile), typeof(ArticleProfile));
             services.LoadMyServices();
         }
 
